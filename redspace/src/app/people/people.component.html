@@ -1,0 +1,8 @@
+<mat-list (click)="sendPeopleDetail(people)" class="people-list" *ngFor="let people of (peopleData | async)?.results"
+  [routerLink]="['peopleDetail']">
+  <mat-list-item>
+    <mat-icon class="material-icons"> account_circle </mat-icon>
+    {{ people.name}}
+  </mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>

@@ -1,0 +1,8 @@
+<mat-list (click)="sendMovieDetail(movie)" *ngFor="let movie of (movieData | async)?.results"
+  [routerLink]="['movieDetail']">
+  <mat-list-item>
+    <mat-icon class="material-icons"> videocam </mat-icon>
+    {{ movie.title}}
+  </mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
